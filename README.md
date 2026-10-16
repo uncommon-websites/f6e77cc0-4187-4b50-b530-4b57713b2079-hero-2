@@ -1,0 +1,2 @@
+# f6e77cc0-4187-4b50-b530-4b57713b2079-hero-2
+Hero section variant 2 for f6e77cc0-4187-4b50-b530-4b57713b2079
