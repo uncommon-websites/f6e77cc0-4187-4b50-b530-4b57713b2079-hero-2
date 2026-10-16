@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renovate Robotics - Automated Shingle Installation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.97); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .animate-fade-in-up {
+            opacity: 0;
+            animation: fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .animate-fade-in {
+            opacity: 0;
+            animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .animate-scale-in {
+            opacity: 0;
+            animation: scaleIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .delay-0 { animation-delay: 0ms; }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        .delay-400 { animation-delay: 400ms; }
+
+        .text-balance { text-wrap: balance; }
+        .text-pretty { text-wrap: pretty; }
+
+        @media (prefers-reduced-motion: reduce) {
+            .animate-fade-in-up, .animate-fade-in, .animate-scale-in {
+                animation: none;
+                opacity: 1;
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white font-sans antialiased text-[#0F172A] selection:bg-blue-100 selection:text-blue-900 min-h-screen flex flex-col overflow-x-hidden">
+
+    <!-- Navigation -->
+    <header class="w-full max-w-[1440px] mx-auto px-6 py-6 md:px-10 flex justify-between items-center animate-fade-in delay-0 z-50 relative">
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-2 group">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-[#0F172A]">
+                <path d="M16 2L2 10V22L16 30L30 22V10L16 2Z" fill="currentColor"/>
+                <path d="M16 13L8 17.5V26.5L16 22V13Z" fill="white"/>
+            </svg>
+            <span class="text-[22px] font-bold tracking-tight text-[#0F172A]">Renovate Robotics</span>
+        </a>
+        
+        <!-- Links -->
+        <nav class="flex items-center gap-6 text-[15px] font-medium text-[#334155]">
+            <a href="#" class="hover:text-[#0F172A] transition-colors duration-200">Technology</a>
+            <a href="#" class="hover:text-[#0F172A] transition-colors duration-200">Partnerships</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="flex-grow flex flex-col items-center pt-20 md:pt-28 px-6 text-center relative z-10">
+        
+        <!-- Headline -->
+        <h1 class="text-[56px] sm:text-[72px] md:text-[88px] font-[800] tracking-tight text-[#0F172A] leading-tight max-w-[900px] mx-auto text-balance animate-fade-in-up delay-100">
+            Automating Shingle<br>Installation
+        </h1>
+        
+        <!-- Subheadline -->
+        <p class="mt-6 text-[18px] md:text-[21px] text-[#334155] max-w-2xl mx-auto leading-relaxed text-pretty animate-fade-in-up delay-200">
+            Renovate Robotics delivers Rufus, a specialized field-robot designed for sloped roofs. Augment your crews and overcome labor shortages with automated shingle installation.
+        </p>
+        
+        <!-- CTA Button -->
+        <div class="mt-10 animate-fade-in-up delay-300">
+            <a href="#" class="inline-flex items-center justify-center px-8 py-3.5 text-[16px] font-medium text-white bg-[#0284c7] rounded-lg hover:opacity-90 transition-all duration-200 active:scale-[0.97] shadow-sm">
+                Join the Private Preview
+            </a>
+        </div>
+
+        <!-- Hero Image Mockup -->
+        <div class="mt-16 md:mt-24 w-full max-w-[1000px] mx-auto relative animate-scale-in delay-400 flex justify-center px-4">
+            <img 
+                src="https://imolwncbqxugevwmleed.supabase.co/storage/v1/object/public/public-assets/hero-images/f6e77cc0-4187-4b50-b530-4b57713b2079/hero-2-img-0-1792184223895.png" 
+                alt="Rufus: Specialized roofing robot for automated shingle installation on sloped surfaces" 
+                class="w-full h-auto object-contain"
+            >
+        </div>
+
+    </main>
+
+</body>
+</html>
